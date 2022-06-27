@@ -1,0 +1,4 @@
+FirstName,LastName,MiddleName,__v,_id,credential,email,hash,password
+Anandarshan,Hebballi,K,0,6273c28d593d878ba6563932,,anandhebbali@gmail.com,28eb8a2129a5dc9c93d9b81c563a8711df420cac903bc2dc9a09a3ac2e5bef7a,
+trial,trail,trial ,0,6273c9d7df7003c6be8d97d0,,trial@gmail.com,d856742b159a34550c9a9fe29aa66fcb85dbdb3302d4ec9355864735260c9397,trial123
+loop,loop,lop,0,6273d7f1ecec8bd13e626fd8,loop@gmail.com 12345,,c4fb0cf4b7fa91cfedf3681178cc7bea81f70e086c9ccafa4acf1382161e67fe,

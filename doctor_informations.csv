@@ -1,0 +1,9 @@
+Name,Specialization,_id,experience,patient,studied
+Doctor A,Eye,6274205d46f147ade279166c,3+,,ABC University
+Doctor B,Full body,6274205d46f147ade279166d,1+,,ABCD College
+Doctor C,Neuro,6274205d46f147ade279166e,2+,,MBBS college
+Doctor D,Diabetes,6274205d46f147ade279166f,1+,,Bangalore
+Insurance A,Policy Bazar,6274345d46f147pol279112f,1+,,M.S. Harvard
+Insurance B,Acko,6274210d41f134ade119166e,2+,,M.S. Stanford
+Insurance C,Acko,6274120d41l987ade119166e,3+,,M.S. UAE
+Insurance D,Policy bazar,6274205d46f147ade279166g,4+,,M.S. California

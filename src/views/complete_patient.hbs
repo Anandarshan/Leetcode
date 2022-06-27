@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Project-Demo [MEDILAB]</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    
+
+    <!-- Bootstrap core CSS -->
+<link href="/docs/5.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+
+    <!-- Favicons -->
+<link rel="apple-touch-icon" href="/docs/5.1/assets/img/favicons/apple-touch-icon.png" sizes="180x180">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-32x32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon-16x16.png" sizes="16x16" type="image/png">
+<link rel="manifest" href="/docs/5.1/assets/img/favicons/manifest.json">
+<link rel="mask-icon" href="/docs/5.1/assets/img/favicons/safari-pinned-tab.svg" color="#7952b3">
+<link rel="icon" href="/docs/5.1/assets/img/favicons/favicon.ico">
+<meta name="theme-color" content="#7952b3">
+
+
+    <style>
+      body{
+        color:white;
+        background-color: rgba(100,38,115,255);
+      }
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+      .border-box{
+        height:600px;
+        border:2px solid whitesmoke;
+      }
+      .text-field{
+        margin-left:10px;
+      }
+      .card{
+          margin-top:20px;
+          color:white;
+          background-color:rgba(100,38,115,255);
+          border:2px solid white;
+      }
+      div.scrollmenu {
+  background-color: #333;
+  overflow: auto;
+  height:550px;
+  white-space: nowrap;
+    }
+
+    div.scrollmenu a {
+    display: inline-block;
+    color: white;
+    text-align: center;
+    padding: 14px;
+    text-decoration: none;
+    }
+
+    div.scrollmenu a:hover {
+    background-color: #777;
+    }
+    form.example input[type=text] {
+  padding: 10px;
+  font-size: 17px;
+  border: 1px solid grey;
+  float: left;
+  width: 80%;
+  background: #f1f1f1;
+}
+
+form.example button {
+  float: left;
+  width: 20%;
+  padding: 10px;
+  background: #2196F3;
+  color: white;
+  font-size: 17px;
+  border: 1px solid grey;
+  border-left: none;
+  cursor: pointer;
+}
+
+form.example button:hover {
+  background: #0b7dda;
+}
+
+form.example::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="cover.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<body>
+    {{>navbar}}
+    <h4 style="float:left">Name : {{PatientName}}</h4>
+    <center><h4>Block Information</h4></center>
+    <form method="post" action="/block_data">
+      <center><input type="submit" value="GET BLOCK DATA" class="btn btn-success"></center>
+    </form>
+    <div>
+        <center><h4 style="margin-top:10px;">Search for Doctor</h4></center>
+        <form class="example" action="action_page">
+  <form class="example">
+  <input type="text" placeholder="Search.." name="search">
+  <button type="submit"><i class="fa fa-search"></i></button>
+</form>
+  <form method="POST" action="/complete_patient">
+  <input type="text" name="patname" value="{{PatientName}}" hidden>
+  {{#data}}
+  <div class="card">
+  <h5 class="card-header" name="Doctor_name" value="{{Name}}">{{Name}}</h5>
+  <div class="card-body">
+    <h5 class="card-title">Monitoring Patient Information</h5>
+    <p class="card-text">Major : {{Specialization}}<br> Studied : {{studied}} <br>experience : {{experience}} </p>
+    <input type="text" name="field" value="{{Name}}" hidden>
+    <input type="radio" name="Grant_access" value="{{Name}}">
+    <label name="Grant_access">Grant Access  </label>
+    <br>
+  </div>
+</div>
+{{/data}}
+<center><input type="submit" name="submit" value="SUBMIT"></center> 
+</form>
+</body>
+</html>

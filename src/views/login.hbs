@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+    <meta name="generator" content="Hugo 0.88.1">
+    <title>Cover Template · Bootstrap v5.1</title>
+
+    <link rel="canonical" href="https://getbootstrap.com/docs/5.1/examples/cover/">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <title>Enter Information</title>
+    <style>
+        .form-filling{
+            border: none;
+            background-color: transparent;
+            resize: none;
+            outline: none;
+            margin-top:10px;
+            border-bottom:2px solid white;
+            color:white;
+        }
+    </style>
+       
+</head>
+<body class="d-flex h-100 text-center text-white" style="background-color: rgba(100,38,115,255)">
+  {{>navbar}}
+
+    <div style="margin-top:15px;border:2px solid white;height:200px;">
+        <form method="POST" action="/genesis">
+            <div>
+                <h4>Personal Information</h4>
+                <div>
+                    <label name="FirstName">First Name : </label>
+                    <input name="FirstName" type="text" class="form-filling" required>
+                    <label name="MiddleName" style="margin-left:50px;margin-top:20px;">Middle Name : </label>
+                    <input name="MiddleName" type="text" class="form-filling">
+                    <label name="LastName" style="margin-left:50px;">Last Name : </label>
+                    <input name="LastName" type="text" class="form-filling" required>
+                </div>
+                <div>
+                    <label name="DOB" style="margin-top:50px;">Date Of Birth</label>
+                    <input name="DOB" type="date" required>
+                    <label name="button" style="margin-left:10px">Gender : </label>
+                    <input type="radio" id="male" name="gender" value="male" required>
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="female" required>
+                    <label for="female">Female</label>
+                </div>
+            </div>
+            <div style="margin-top:60px;border:2px solid white;height:310px;">
+                <h4 name="patient-info">Contact and Other information</h4>
+                <label name="address">Address : </label>
+                <input name="address" type="text" class="form-filling" required>
+                <label name="phoneno" style="margin-left:20px;">Phone number  : </label>
+                <input name="phoneno" type="tel" class="form-filling" required></br>
+                <label name="eme">Emergency Contact Number : </label>
+                <input name="eme" type="text" class="form-filling">
+                <label name="email" style="margin-left:10px" required>Email : </label>
+                <input name="email" type="mail" class="form-filling">
+                <label name="password" style="margin-left:10px">Password : </label>
+                <input name="password" type="text" class="form-filling" required>
+                <label name="bloodgroup" style="margin-left:10px">Blood Group : </label>
+                <select required>
+                    <option></option>
+                    <option>o+ve</option>
+                    <option>o-ve</option>
+                    <option>A+ve</option>
+                    <option>A-ve</option>
+                    <option>B+ve</option>
+                    <option>B-ve</option>
+                    <option>AB+ve</option>
+                    <option>AB-ve</option>
+                </select>
+                <br>
+                <br>
+                <center><h3>Enter these credentials for Insurance purpose.</h3></center>
+                <label name="occupation" style="margin-left:10px">Occupation : </label>
+                <input name="purpose" type="text" class="form-filling" required>
+                <label name="purpose" style="margin-left:10px">Income : </label>
+                <input name="purpose" type="text" class="form-filling" required>
+                
+
+                
+                <h4 style="margin-top:20px;">Do you want your credentials to be sent through a mail?</h4>
+                <input type="radio" id="yes" name="enrollement" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="enrollement" value="no">
+                <label for="no">No</label>
+            </div>
+            <input type="submit" class="btn btn-success" value="Continue" style="height:50px;width:100px;margin-top:20px">
+
+
+    </div>
+        </form>
+    </div>
+</div>
+    
+    
+</body>
+</html>
